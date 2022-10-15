@@ -11,7 +11,7 @@ export function valida (input){
 }
 
 const validadores = {
-    nacimiento: (input) => validarNacimiento(input),
+    nacimiento: (input) => validarNacimiento(input)
 };
 
 function validarNacimiento (input) {
@@ -26,6 +26,10 @@ function validarNacimiento (input) {
 
 function mayorDeEdad (fecha) {
     const fechaActual = new Date();
-    const diferenciaFechas = new Date(fecha.getUTCFullYear() + 18, fecha.getUTCMonth(), fecha.getUTCDate());
+    const diferenciaFechas = new Date(
+    fecha.getUTCFullYear() + 18, 
+    fecha.getUTCMonth(), 
+    fecha.getUTCDate()
+    );
     return diferenciaFechas <= fechaActual;
 }
