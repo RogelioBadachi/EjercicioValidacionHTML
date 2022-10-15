@@ -21,21 +21,21 @@ export function valida (input){
 
 const tipoDeErrores = [
     "valueMissing",
-    "typeMissmatch",
+    "typeMismatch",
     "patternMismatch",
     "customError",
 ]
 
 const mensajesDeError = {
     nombre: {
-        valueMissing: "Este campo no puede estar vacío"
+        valueMissing: "Este campo nombre no puede estar vacío"
     }, 
     email: {
-        valueMissing: "Este campo no puede estar vacío",
+        valueMissing: "Este campo correo no puede estar vacío",
         typeMismatch: "El correo no es válido"
     },
     password: {
-        valueMissing: "Este campo no puede estar vacío",
+        valueMissing: "Este campo contraseña no puede estar vacío",
         patternMismatch: "Mínimo 8 caracteres, una letra, un número y un caracter especial"
     },
     nacimiento: {
@@ -56,6 +56,7 @@ function mostrarMensajeDeError(tipoDeInput, input){
             console.log(tipoDeInput, error);
             console.log(input.validity[error]);
             console.log(mensajesDeError[tipoDeInput][error]);
+            mensaje = mensajesDeError[tipoDeInput][error];
         }
     })
 
