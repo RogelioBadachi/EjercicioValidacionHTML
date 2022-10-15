@@ -5,6 +5,11 @@ inputNacimiento.addEventListener("blur", (evento) => {
 })
 
 function validarNacimiento (input) {
-    const fecha = input.value;
-    console.log(fecha);
+    const fechaCliente = new Date(input.value);
+    mayorDeEdad(fechaCliente);
+}
+
+function mayorDeEdad (fecha) {
+    const fechaActual = new Date();
+    console.log(fecha, fechaActual);
 }
