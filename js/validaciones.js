@@ -11,5 +11,6 @@ function validarNacimiento (input) {
 
 function mayorDeEdad (fecha) {
     const fechaActual = new Date();
-    console.log(fecha, fechaActual);
+    const diferenciaFechas = new Date(fecha.getUTCFullYear() + 18, fecha.getUTCMonth(), fecha.getUTCDate());
+    console.log(diferenciaFechas <= fechaActual);
 }
