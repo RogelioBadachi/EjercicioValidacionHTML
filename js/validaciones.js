@@ -17,6 +17,24 @@ export function valida (input){
 
 }
 
+const mensajesDeError = {
+    nombre: {
+        valueMissing: "Este campo no puede estar vacío"
+    }, 
+    email: {
+        valueMissing: "Este campo no puede estar vacío",
+        typeMismatch: "El correo no es válido"
+    },
+    password: {
+        valueMissing: "Este campo no puede estar vacío",
+        patternMismatch: "Mínimo 8 caracteres, una letra, un número y un caracter especial"
+    },
+    nacimiento: {
+        valueMissing: "Este campo no puede estar vacío",
+        customError: "Debes tener al menos 18 años de edad"
+    }
+}
+
 const validadores = {
     nacimiento: (input) => validarNacimiento(input)
 };
