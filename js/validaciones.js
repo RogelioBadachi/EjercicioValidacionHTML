@@ -3,7 +3,7 @@
 inputNacimiento.addEventListener("blur", (evento) => {
     validarNacimiento(evento.target);
 }) */
-function valida (input){
+export function valida (input){
     const tipoDeInput = input.dataset.tipo;
     if(validadores[tipoDeInput]){
         validadores[tipoDeInput](input)
